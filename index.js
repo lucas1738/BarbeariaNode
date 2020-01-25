@@ -24,6 +24,26 @@ function checkProjectExists(req, res, next) {
   return next();
 }
 
+function preventProjectsDuplication(req, res, next) {
+
+  let projectNome = projects.find(proj => proj.title == req.body.title);
+  console.log(projectNome);
+
+  if (projects.length < 1) {
+    if (typeof (projectNome) == 'undefined') {
+      return next();
+    }
+  } else {
+    if (typeof (projectNome) !== 'undefined') {
+      return res.status(404).json({ error: `There's already a project called ${req.body.title}` });
+    } else {
+
+      return next();
+    }
+  }
+
+}
+
 function geradorId() {
   return projects.length + 1;
 }
@@ -42,7 +62,7 @@ server.get('/projects/:id', checkProjectExists, (req, res) => {
 });
 
 //ROTA DE CADASTRO DOS PROJETOS
-server.post('/projects', (req, res) => {
+server.post('/projects', preventProjectsDuplication, (req, res) => {
   const { title } = req.body;
   projects.push({
     id: geradorId(),
