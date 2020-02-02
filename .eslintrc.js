@@ -5,6 +5,7 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
+
   ],
   globals: {
     Atomics: 'readonly',
@@ -21,7 +22,8 @@ module.exports = {
     "camelcase": "off",
     "linebreak-style": 0,
     "eslint linebreak-style": [0, "error", "windows"],
-    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }]
+    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+
 
 
 
