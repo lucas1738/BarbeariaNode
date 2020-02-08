@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "desafioDois",
   "version": "1.0.0",
   "main": "index.js",
@@ -14,13 +15,38 @@
   "scripts": {
     "dev": "nodemon src/server.js"
   },
+=======
+  "name": "goBarber",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+>>>>>>> 8cf5c73462d3bf7241a7c29cb8a4fd80c55da816
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
+<<<<<<< HEAD
     "pg": "^7.18.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.3",
     "yup": "^0.28.1"
+=======
+    "mysql2": "^2.1.0",
+    "pg": "^7.17.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3",
+    "yup": "^0.28.1"
+  },
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "nodemon": "^2.0.2",
+    "sequelize-cli": "^5.5.1",
+    "sucrase": "^3.12.1"
+>>>>>>> 8cf5c73462d3bf7241a7c29cb8a4fd80c55da816
   }
 }
